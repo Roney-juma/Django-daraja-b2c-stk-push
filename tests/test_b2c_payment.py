@@ -11,7 +11,7 @@ from django_daraja.mpesa.exceptions import MpesaInvalidParameterException
 class MpesaB2CPaymentTestCase(TestCase):
 
 	cl = MpesaClient()
-	callback_url = 'https://darajambili.herokuapp.com/express-payment'
+	callback_url = ''
 	success_description = 'Accept the service request successfully.'
 
 	def test_business_payment_success(self):

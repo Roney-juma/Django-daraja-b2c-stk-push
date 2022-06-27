@@ -9,12 +9,12 @@ from decouple import config
 from datetime import datetime
 
 cl = MpesaClient()
-stk_push_callback_url = 'https://darajambili.herokuapp.com/express-payment'
-b2c_callback_url = 'https://darajambili.herokuapp.com/b2c/result'
+stk_push_callback_url = 'https://mydomain.com/path'
+b2c_callback_url = ''
 
 def index(request):
 
-	return HttpResponse('Welcome to the home of daraja APIs')
+	return HttpResponse(b'Welcome to the ABC bank Online Payment service')
 
 def oauth_success(request):
 	r = cl.access_token()
@@ -23,7 +23,7 @@ def oauth_success(request):
 def stk_push_success(request):
 	phone_number = config('LNM_PHONE_NUMBER')
 	amount = 1
-	account_reference = 'ABC001'
+	account_reference = 'reference'
 	transaction_desc = 'STK Push Description'
 	callback_url = stk_push_callback_url
 	r = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)

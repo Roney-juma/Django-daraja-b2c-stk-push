@@ -21,7 +21,7 @@ Business Payment
 
 		from django_daraja.mpesa.core import MpesaClient
 
-		phone_number = '07xxxxxxxx'
+		phone_number = '0710248170'
 		amount = 1
 		transaction_desc = 'Description'
 		occassion = 'Occassion'
@@ -35,7 +35,7 @@ Salary Payment
 
 		from django_daraja.mpesa.core import MpesaClient
 
-		phone_number = '07xxxxxxxx'
+		phone_number = '0710248170'
 		amount = 1
 		transaction_desc = 'Description'
 		occassion = 'Occassion'
@@ -49,7 +49,7 @@ Promotion Payment
 
 		from django_daraja.mpesa.core import MpesaClient
 
-		phone_number = '07xxxxxxxx'
+		phone_number = '0710248170'
 		amount = 1
 		transaction_desc = 'Description'
 		occassion = 'Occassion'

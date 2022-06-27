@@ -17,7 +17,7 @@ class MpesaStkPushTestCase(TestCase):
 		'''
 		Test parse successful STK push result
 		'''
-		result = '{"Body":{"stkCallback":{"MerchantRequestID":"19918-3028728-2","CheckoutRequestID":"ws_CO_DMZ_264695293_11032019122104433","ResultCode":0,"ResultDesc":"The service request is processed successfully.","CallbackMetadata":{"Item":[{"Name":"Amount","Value":1.00},{"Name":"MpesaReceiptNumber","Value":"NCB9FJNAIT"},{"Name":"Balance"},{"Name":"TransactionDate","Value":20190311122121},{"Name":"PhoneNumber","Value":254719748260}]}}}}'
+		result = '{"Body":{"stkCallback":{"MerchantRequestID":"19918-3028728-2","CheckoutRequestID":"ws_CO_DMZ_264695293_11032019122104433","ResultCode":0,"ResultDesc":"The service request is processed successfully.","CallbackMetadata":{"Item":[{"Name":"Amount","Value":1.00},{"Name":"MpesaReceiptNumber","Value":"NCB9FJNAIT"},{"Name":"Balance"},{"Name":"TransactionDate","Value":20190311122121},{"Name":"PhoneNumber","Value":}]}}}}'
 		data = self.cl.parse_stk_result(result)
 		self.assertEqual(data.get('ResultDesc'), 'The service request is processed successfully.')
 

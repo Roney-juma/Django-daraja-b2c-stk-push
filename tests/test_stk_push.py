@@ -11,19 +11,19 @@ from django_daraja.mpesa.exceptions import MpesaInvalidParameterException
 class MpesaStkPushTestCase(TestCase):
 
 	cl = MpesaClient()
-	callback_url = 'https://darajambili.herokuapp.com/express-payment'
+	callback_url = 'https://mydomain.com/path'
+	response_description = 'Thank you'
 
 	def test_stk_push_success(self):
 		'''
 		Test successful STK push
 		'''
-
 		phone_number = config('LNM_PHONE_NUMBER')
 		amount = 1
 		account_reference = 'reference'
 		transaction_desc = 'Description'
 		response = self.cl.stk_push(phone_number, amount, account_reference, transaction_desc, self.callback_url)
-		self.assertEqual(response.response_description, 'Success. Request accepted for processing')
+		self.assertEqual(response.response_description)
 
 	def test_stk_push_empty_reference(self):
 		'''

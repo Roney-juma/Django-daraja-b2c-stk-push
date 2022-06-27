@@ -18,14 +18,11 @@ setup(
     long_description=
 '''
 This is a django library based on the Safaricom MPESA daraja API. Use it for a simplified experience, spend less time setting up...
-
-Read the full documentation at https://django-daraja.readthedocs.io
-
-MPESA Daraja API documentation can be found at https://developer.safaricom.co.ke''',
-    author='Martin Mogusu',
-    author_email='martinmogusu@gmail.com',
-    url='https://github.com/martinmogusu/django-daraja',
-    download_url='https://github.com/martinmogusu/django-daraja.git',
+''',
+    author='Roney Juma',
+    author_email='ochiengroneyjuma909@gmail.com',
+    url='https://github.com/roney-juma/django-daraja',
+    download_url='https://github.com/roney-juma/django-daraja.git',
     license='MIT License',
     packages=find_packages(exclude=['*.tests', '*.tests.*', 'tests.*', 'tests']),
     include_package_data=True,
